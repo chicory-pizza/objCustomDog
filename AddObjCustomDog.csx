@@ -21,12 +21,12 @@ if (importFiles == null)
 }
 
 SetProgressBar(null, "Summoning drawdogs...", 0, 1 + importFiles.Length);
-StartProgressBarUpdater();
+StartUpdater();
 
 addObjCustomDog();
 importGML(importFiles);
 
-await StopProgressBarUpdater();
+await StopUpdater();
 HideProgressBar();
 ScriptMessage("objCustomDog is now added.");
 
@@ -35,7 +35,7 @@ string[] promptScriptsFolder()
 {
     ScriptMessage("Select the objCustomDog Scripts folder on the next folder dialog.");
 
-    string importFolder = PromptChooseDirectory();
+    string importFolder = PromptChooseDirectory("");
     if (importFolder == null)
     {
         return null;
@@ -78,10 +78,10 @@ async void importGML(string[] importFiles)
     {
         foreach (string file in importFiles)
         {
-            IncrementProgress();
+            IncProgress();
 
             ImportGMLFile(file, true, false, true);
         }
     });
-    DisableAllSyncBindings();
+    SyncBinding(false);
 }
