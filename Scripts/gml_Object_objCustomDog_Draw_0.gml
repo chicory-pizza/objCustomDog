@@ -80,6 +80,15 @@ if (hit_anim > 0)
     if (sin(((sqr(hit_anim) * pi) * 14)) < 0)
         alpha = 0
 }
+
+// Create brush
+if (attribute_get("brush") == 1 && brush == noone)
+{
+    brush = instance_create_depth(x, y, depth, objBrush)
+    brush.brush_size = 2.0
+    brush.brush_color %= global.the_levelobj.paint.brush_colors
+}
+
 if (brush != noone && brush.visible && (!nobody))
 {
     if (xs < 0)

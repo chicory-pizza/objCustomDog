@@ -7,11 +7,12 @@ attribute_add("hair", "Simple", "")
 attribute_add("expression", "", "")
 attribute_add("animation", "idle", "")
 
-attribute_add("color_head", 16777215, "")
-attribute_add("color_skin", 16777215, "")
-attribute_add("color_body", 16777215, "")
+attribute_add("color_head", 16777215, "Hat color")
+attribute_add("color_skin", 16777215, "Dog body color")
+attribute_add("color_body", 16777215, "Clothes color")
 
-// animation = "idle"
+attribute_add("brush", 0, "Set to 1 to show a brush")
+
 scene_anim = ""
 animation_index = 0
 color_part[0] = 16777215
@@ -26,14 +27,6 @@ ears_blow = 0
 
 animation_speed = 1
 
-// brush
-global.brush_obj[10] = instance_create_depth(x, y, depth, objBrush)
-with (global.brush_obj[10])
-{
-    brush_color %= global.the_levelobj.paint.brush_colors
-}
-global.brush_obj[10].brush_size = 2.0
-brush = global.brush_obj[10]
-
+brush = noone
 brush_default_angle = 40
 brush_angle = brush_default_angle
