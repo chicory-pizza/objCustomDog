@@ -1,9 +1,16 @@
 // draw_customdogobj(x, y, facing, 1)
 
+var sc = 1
+image_xscale = attribute_get("xscale")
+image_yscale = attribute_get("yscale")
+image_angle = attribute_get("angle")
+
 var xx = x
 var yy = y
 var xs = 1
 var ys = 1
+xs = (image_xscale * sc)
+ys = (image_yscale * sc)
 
 var anim = attribute_get("animation")
 if (scene_anim != "")

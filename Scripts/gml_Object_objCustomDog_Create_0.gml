@@ -13,6 +13,10 @@ attribute_add("color_body", 16777215, "Clothes color")
 
 attribute_add("brush", 0, "Set to 1 to show a brush")
 
+attribute_add("xscale", 1, "Horizontal scale, set to negative (such as -1) to flip horizontally (face to the left)")
+attribute_add("yscale", 1, "Vertical scale, set to negative (such as -1) to flip vertically")
+attribute_add("angle", 0, "0 for default")
+
 scene_anim = ""
 animation_index = 0
 color_part[0] = 16777215
