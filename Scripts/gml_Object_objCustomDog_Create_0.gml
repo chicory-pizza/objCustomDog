@@ -10,6 +10,8 @@ attribute_add("animation", "idle", "")
 attribute_add("color_head", 16777215, "Hat color")
 attribute_add("color_skin", 16777215, "Dog body color")
 attribute_add("color_body", 16777215, "Clothes color")
+attribute_add("custom_clothes", "", "Used to show custom clothes")
+attribute_add("custom_hat", "", "Used to show custom hat")
 
 attribute_add("brush", 0, "Set to 1 to show a brush")
 
@@ -34,3 +36,6 @@ animation_speed = 1
 brush = noone
 brush_default_angle = 40
 brush_angle = brush_default_angle
+
+custom_clothes_sprite = noone
+custom_hat_sprite = noone

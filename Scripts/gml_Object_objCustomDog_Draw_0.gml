@@ -1,9 +1,6 @@
 // draw_customdogobj(x, y, facing, 1)
 
 var sc = 1
-image_xscale = attribute_get("xscale")
-image_yscale = attribute_get("yscale")
-image_angle = attribute_get("angle")
 
 var xx = x
 var yy = y
@@ -66,11 +63,23 @@ if (body_spri < 0)
     body_spr = abs(body_spri)
     body_spri = 0
 }
+if (custom_clothes_sprite != noone)
+{
+    body_spr = custom_clothes_sprite
+    body_spri = 0
+}
+
 if (hat_spri < -1)
 {
     hat_spr = abs(hat_spri)
     hat_spri = 0
 }
+if (custom_hat_sprite != noone)
+{
+    hat_spr = custom_hat_sprite
+    hat_spri = 0
+}
+
 if (!nobody)
 {
     if (body_a != 0)
