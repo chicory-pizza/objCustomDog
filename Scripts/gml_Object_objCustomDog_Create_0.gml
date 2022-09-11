@@ -14,6 +14,9 @@ attribute_add("custom_clothes", "", "Used to show custom clothes")
 attribute_add("custom_hat", "", "Used to show custom hat")
 
 attribute_add("brush", 0, "Set to 1 to show a brush")
+attribute_add("dialogue", "", "Dialogue text when you speak to this character, only available if interactable. Use ~ to split to a new dialogue box.")
+attribute_add("interactable", 0, "Set to 1 to enable talking")
+attribute_add("npc_name", "", "This character's name that appears when you walk up to them, only seen if interactable")
 
 attribute_add("xscale", 1, "Horizontal scale, set to negative (such as -1) to flip horizontally (face to the left)")
 attribute_add("yscale", 1, "Vertical scale, set to negative (such as -1) to flip vertically")

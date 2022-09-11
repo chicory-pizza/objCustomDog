@@ -1,3 +1,6 @@
+interactable = attribute_get("interactable")
+npc_name = attribute_get("npc_name")
+
 image_xscale = attribute_get("xscale")
 image_yscale = attribute_get("yscale")
 image_angle = attribute_get("angle")
